@@ -87,6 +87,20 @@ p {
      width: 1170px;
    }
  }
+@media screen and (min-width: 1920px) {
+   header .hero h1 {
+   font-size:100px;
+   font-weight: 100;
+   margin:65px 0 0 100px;
+   }
+   header .hero h3 {
+   font-size: 45px;
+   color:#82644F;
+   line-height: 50px;
+   font-weight: 100;
+   margin: 20px 0 0 100px;
+   }
+}
 
  /* HEADER */
  header {
