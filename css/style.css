@@ -13,8 +13,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
    font-size: 64px;
-   font-weight: 300;
-   margin-bottom: 10px;
+   font-weight: 100;
+   margin-top: 25px;
+   margin-bottom: 5px;
 }
 
 h2 {
@@ -25,7 +26,9 @@ h2 {
 
 h3 {
    font-size: 24px;
-   font-weight: 500;
+   font-weight: 300;
+   line-height: 32px;
+   margin-top: 0px;
    margin-bottom: 5px;
 }
 
@@ -65,7 +68,7 @@ p {
 
  @media (min-width: 768px) {
    .container {
-     width: 750px;
+     width: 760px;
    }
  }
  @media (min-width: 992px) {
@@ -73,7 +76,7 @@ p {
      width: 970px;
    }
    .one-half {
-     width: 46%;
+     width: 40%;
    }
    .one-third {
      width: 29.33333%;
@@ -125,18 +128,15 @@ p {
    text-align: left;
    display:block;
    position: relative;
+   padding-bottom: 4em;
+
  }
  header .hero h1 {
    font-size:64px;
-   font-weight: 100;
-   margin:25px 0 0 65px;
+   margin-left: 65px;
  }
  header .hero h3 {
-   font-size: 24px;
-   color:#82644F;
-   line-height: 32px;
-   font-weight: 100;
-   margin: 10px 0 0 65px;
+   margin-left: 65px;
  }
  header .hero img {
    display: block;
@@ -150,16 +150,16 @@ p {
  
 
  /* CTA SOLID BUTTON */
-
  header nav ul > li.btn {
    padding: 10px 15px;
  }
+
 
 /* OUTLINED BUTTON */
  header nav ul > li.btn-outline {
    padding: 10px 15px;
    border: 2px solid #36312D;
-   border-radius: 4px;
+   border-radius: 6px;
  }
  header nav ul > li.btn-outline:hover {
    background: #36312D;
@@ -172,9 +172,10 @@ p {
    color: #FFFFFF;
  }
 
+
 /* BUTTONS */
  .btn {
-   border-radius: 4px;
+   border-radius: 6px;
    font-weight: 500;
    text-decoration: none;
    padding:10px 30px;
@@ -194,3 +195,162 @@ p {
    color:#BE1432;
  }
 
+
+/* key-features */
+ .key-features .container .one-half {
+   display:block;
+   position:relative;
+ }
+ .key-features .container {
+   margin: 0 auto;
+   padding:4em 0;
+   text-align: center;
+ }
+ .key-features i {
+   color:#82644F;
+   font-size:36px;
+   margin:0 10px 8px 0;
+   vertical-align: middle;
+ }
+ .key-features h2 {
+   color:#82644F;
+ }
+ .key-features .one-half h3 {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-size: 24px;
+   font-weight: 100;
+   font-style: italic;
+   margin-top: 0;
+ }
+ .key-features .one-half p {
+   margin-top: 0;
+ }
+
+ 
+/* our-plans */
+ .our-plans {
+   background: #FFF7E4;
+   background-size:cover;
+   text-align: center;
+   padding:4em 0;
+ }
+ .our-plans h2, .our-plans p {
+   color:#36312D;
+ }
+ .our-plans ul {
+   margin:0 auto;
+   padding:2em 0;
+ }
+ .our-plans ul li {
+   list-style-type: none;
+ }
+.box {
+   padding:0 15px 15px;
+   background: #FFB256;
+   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.40);
+   min-height: 445px;
+   position: relative;
+   margin-top: 25px;
+ }
+ .box.middle {
+   min-height: 470px;
+   margin-top:0px;
+ }
+ .box h2 {
+   color:#36312D;
+   margin: 5px auto 0;
+ }
+ .box h3 {
+   font-size: 50px;
+   font-weight: 500;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   text-align: center;
+ }
+ .box h3 span {
+   font-size: 32px;
+   vertical-align: top;
+ }
+ .box h3 span.month {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-weight: 100;
+   font-size: 18px;
+   vertical-align: bottom;
+ }
+ .box ul li {
+   font-size:18px;
+   margin:0 auto 5px;
+   font-weight: 100;
+ }
+ .box img {
+   margin-top: 40px;
+ }
+
+ .box .btn {
+   position:absolute;
+   bottom:60px;
+   left:60px;
+   right:60px;
+ }
+ .small {
+   font-size: 12px;
+   color: #FEFEFE;
+   line-height: 15px;
+   font-style:italic;
+ }
+
+
+/* TESTIMONALS */
+ .testimonials {
+   background: #FFB256;
+   padding: 4em 0;
+   text-align: center;
+ }
+ .testimonials h2 {
+   color: #FFFFFF;
+ }
+ .testimonials ul {
+   margin:0 auto;
+   padding:2em 0;
+ }
+ .testimonials ul li {
+   list-style-type: none;
+ }
+ .testimonials blockquote {
+   color:#82644F;
+   text-align: left;
+   font-style: italic;
+   background:#FFE6AF;
+   position: relative;
+   padding:30px;
+   width:auto;
+   margin:0;
+ }
+  .testimonials blockquote:after {
+   top: 100%;
+   left: 13%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-top-color: #FFE6AF;
+   border-width: 10px;
+   margin-left: -10px;
+ }
+  .testimonials img {
+   height: 65px;
+   width: 65px;
+   border-radius:50%;
+   float: left;
+   display: inline-block;
+   margin:20px 10px 0 0;
+ }
+ .testimonials p.name {
+   float: left;
+   display: inline-block;
+   text-align: left;
+   font-size:16px;
+   margin-top: 30px;
+ }
