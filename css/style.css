@@ -65,18 +65,19 @@ p {
    min-height: 1px;
    margin: 0 2% 20px;
  }
-
  @media (min-width: 768px) {
    .container {
      width: 760px;
    }
+   header .container .hero img {
+      width: 600px;
  }
  @media (min-width: 992px) {
    .container {
      width: 970px;
    }
    .one-half {
-     width: 40%;
+     width: 46%;
    }
    .one-third {
      width: 29.33333%;
@@ -217,6 +218,7 @@ p {
  }
  .key-features h2 {
    color:#82644F;
+   margin-top: 0;
  }
  .key-features .one-half h3 {
    font-family: "Roboto", Helvetica, Arial, sans-serif;
