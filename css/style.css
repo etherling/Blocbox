@@ -245,7 +245,7 @@ p {
    text-align: center;
  }
  .left-nav .items {
-   padding:0 6%;
+   margin:0 6%;
  }
  .left-nav .items p {
    font-weight: 500;
@@ -253,14 +253,18 @@ p {
    font-size: 12px;
    color: #E2E2E2;
    line-height: 15px;
+   margin-left: 3%;
  }
  .left-nav .items ul {
-   margin:0 0 40px;
+   margin:0 0 30px;
    padding:0;
  }
  .left-nav .items ul li {
    list-style-type: none;
-   margin-bottom: 15px;
+   padding: 10px 10px;
+ }
+ .left-nav .items ul li.active {
+   background: #36312D;
  }
  .left-nav .items ul li a {
    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
@@ -269,6 +273,9 @@ p {
    text-decoration: none;
    font-weight: 400;
  }
+ .left-nav .items ul li:hover {
+   background: #36312D;
+ }
  .left-nav .items ul li a:hover {
    color:#FFFFFF;
  }
@@ -276,9 +283,8 @@ p {
    width:18px;
    font-size: 18px;
    text-align: center;
-   margin-right:8px;
+   margin-right:10px;
  }
-
 
   /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {
