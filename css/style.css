@@ -383,6 +383,9 @@ p {
  }
 /* Tablets */
  @media (min-width:768px) {
+   .left-nav .site-logo img {
+      width: 90%;
+   }
    .content {
      padding:1.5em 5%;
      float:right;
