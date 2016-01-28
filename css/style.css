@@ -332,7 +332,7 @@ p {
    background: #36312D;
  }
  .left-nav .items ul li a:hover {
-   color:#FFFFFF;
+   color:#E2E2E2;
  }
  .left-nav .items ul li a i {
    width:18px; /* 16px */
@@ -366,20 +366,41 @@ p {
    font-weight: 400;
    margin:0 0 0 5px; /* 10px */
  }
- .left-nav .settings a {
+.account-settings a {
+   color:#36312D;
+   font-size: 15px;
+   text-decoration: none;
+   text-align: left;
+   float: left;
+   margin-bottom:10px;
+}
+.account-settings .cog {
    color:#36312D;
    font-size: 21px;
    text-decoration: none;
    text-align: right;
    float: right;
-   margin-right: 20px; /* 10px */
    margin-top:8px;
+
+}
+
+/* ACCOUNT SETTINGS COG */
+ .left-nav .settings .cog {
+   margin-right: 20px; /* 10px */
  }
-.left-nav .settings a:hover {
-   color:#FFFFFF;
+ .left-nav .settings .cog:hover {
+   color: #E2E2E2;
  }
 
+
+
+
   /* CONTENT */
+ .menu-items a {
+   font-size: 15px;
+   font-weight: 400;
+   color: #36312D;
+ }
  .content {
    padding:6em 1% 1.5em;
    float:right;

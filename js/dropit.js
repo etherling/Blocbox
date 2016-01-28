@@ -95,3 +95,96 @@
     $.fn.dropit.settings = {};
 
 })(jQuery);
+
+
+
+
+
+;(function($) {
+
+    $.fn.popit = function(method) {
+
+        var methods = {
+
+            init : function(options) {
+                this.popit.settings = $.extend({}, this.popit.defaults, options);
+                return this.each(function() {
+                    var $el = $(this),
+                         el = this,
+                         settings = $.fn.popit.settings;
+
+                    // Hide initial submenus
+                    $el.addClass('popit')
+                    .find('>'+ settings.triggerParentEl +':has('+ settings.submenuEl +')').addClass('popit-trigger')
+                    .find(settings.submenuEl).addClass('popit-submenu').hide();
+
+                    // Open on click
+                    $el.off(settings.action).on(settings.action, settings.triggerParentEl +':has('+ settings.submenuEl +') > '+ settings.triggerEl +'', function(){
+                        // Close click menu's if clicked again
+                        if(settings.action == 'click' && $(this).parents(settings.triggerParentEl).hasClass('popit-open')){
+                            settings.beforeHide.call(this);
+                            $(this).parents(settings.triggerParentEl).removeClass('popit-open').find(settings.submenuEl).hide();
+                            settings.afterHide.call(this);
+                            return false;
+                        }
+
+                        // Hide open menus
+                        settings.beforeHide.call(this);
+                        $('.popit-open').removeClass('popit-open').find('.popit-submenu').hide();
+                        settings.afterHide.call(this);
+
+                        // Open this menu
+                        settings.beforeShow.call(this);
+                        $(this).parents(settings.triggerParentEl).addClass('popit-open').find(settings.submenuEl).show();
+                        settings.afterShow.call(this);
+
+                        return false;
+                    });
+
+                    // Close if outside click
+                    $(document).on('click', function(){
+                        settings.beforeHide.call(this);
+                        $('.popit-open').removeClass('popit-open').find('.popit-submenu').hide();
+                        settings.afterHide.call(this);
+                    });
+
+                    // If hover
+                    if(settings.action == 'mouseenter'){
+                        $el.on('mouseleave', '.popit-open', function(){
+                            settings.beforeHide.call(this);
+                            $(this).removeClass('popit-open').find(settings.submenuEl).hide();
+                            settings.afterHide.call(this);
+                        });
+                    }
+
+                    settings.afterLoad.call(this);
+                });
+            }
+
+        };
+
+        if (methods[method]) {
+            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method) {
+            return methods.init.apply(this, arguments);
+        } else {
+            $.error( 'Method "' +  method + '" does not exist in popit plugin!');
+        }
+
+    };
+
+    $.fn.popit.defaults = {
+        action: 'click', // The open action for the trigger
+        submenuEl: 'ul', // The submenu element
+        triggerEl: 'a', // The trigger element
+        triggerParentEl: 'li', // The trigger parent element
+        afterLoad: function(){}, // Triggers when plugin has loaded
+        beforeShow: function(){}, // Triggers before submenu is shown
+        afterShow: function(){}, // Triggers after submenu is shown
+        beforeHide: function(){}, // Triggers before submenu is hidden
+        afterHide: function(){} // Triggers before submenu is hidden
+    };
+
+    $.fn.popit.settings = {};
+
+})(jQuery);
