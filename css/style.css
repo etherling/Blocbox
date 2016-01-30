@@ -39,7 +39,6 @@ p {
 }
 
 
-
  /* GRID */
  .container {
    margin-right: auto;
@@ -63,8 +62,6 @@ p {
    min-height: 1px;
    margin:0 2% 20px;
  }
-
-
 
 
  @media (min-width: 768px) {
@@ -91,7 +88,6 @@ p {
      width: 1170px;
    }
  }
-
 
 
  /* HEADER */
@@ -168,7 +164,7 @@ p {
  }
 
 
-  /* FOOTER */
+/* FOOTER */
  footer {
    background-color: #82644F;
    background-image: linear-gradient(to top,
@@ -220,8 +216,6 @@ p {
      padding: 2em 0 2em 1.5em;
    }
  }
-
-
 
 
  /* DASHBOARD */
@@ -292,6 +286,7 @@ p {
    }
  }
 
+
  .left-nav .site-logo {
    padding:20px 0;
    background:#36312D;
@@ -310,12 +305,12 @@ p {
    margin-left: 3%; /* I added this */
  }
  .left-nav .items ul {
-   margin:0 0 20px; /* 40px */
+   margin:0 0 20px;
    padding:0;
  }
  .left-nav .items ul li {
    list-style-type: none;
-   margin-bottom: 0px; /* 15px */
+   margin-bottom: 0px;
    padding: 5px 5px; /* I added this */
  }
  .left-nav .items ul li.active {
@@ -335,11 +330,12 @@ p {
    color:#E2E2E2;
  }
  .left-nav .items ul li a i {
-   width:18px; /* 16px */
+   width:18px;
    font-size: 18px;
    text-align: center;
    margin-right:8px;
  }
+
 
   /* LEFT NAVBAR SETTINGS */
  .left-nav .settings {
@@ -356,7 +352,7 @@ p {
    height:35px;
    width:35px;
    border-radius: 50%;
-   margin-left:10px; /* 10px */
+   margin-left:10px;
    display: inline-block;
  }
  .left-nav .settings p {
@@ -364,7 +360,7 @@ p {
    vertical-align: top;
    padding-top: 10px;
    font-weight: 400;
-   margin:0 0 0 5px; /* 10px */
+   margin:0 0 0 5px;
  }
 .account-settings a {
    color:#36312D;
@@ -384,15 +380,14 @@ p {
 
 }
 
+
 /* ACCOUNT SETTINGS COG */
  .left-nav .settings .cog {
-   margin-right: 20px; /* 10px */
+   margin-right: 20px;
  }
  .left-nav .settings .cog:hover {
    color: #E2E2E2;
  }
-
-
 
 
   /* CONTENT */
